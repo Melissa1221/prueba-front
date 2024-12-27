@@ -11,6 +11,17 @@
   margin-bottom: 2rem;
 }
 
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
 .tableContainer {
   background-color: white;
   border-radius: 0.5rem;
@@ -38,4 +49,41 @@
 
 .table tr:hover {
   background-color: #f9fafb;
+}
+
+.noResults {
+  text-align: center;
+  color: #6b7280;
+  padding: 2rem !important;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #4b5563;
+  font-size: 1.125rem;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #ef4444;
+  font-size: 1.125rem;
+  background-color: #fee2e2;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .table {
+    font-size: 0.875rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75rem;
+  }
 } 
